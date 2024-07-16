@@ -197,8 +197,8 @@
           dest: "{{ lemmy_base_dir }}/{{ domain }}/nginx_internal.conf"
           mode: "0644"
       vars:
-        lemmy_docker_image: "docker.io/dessalines/lemmy:{{ lemmy_version | default(lookup('file', 'VERSION')) }}"
-        lemmy_docker_ui_image: "docker.io/dessalines/lemmy-ui:{{ lemmy_ui_version | default(lemmy_version | default(lookup('file', 'VERSION'))) }}"
+        lemmy_docker_image: "docker.io/qiancsf/lemmy:{{ lemmy_version | default(lookup('file', 'VERSION')) }}"
+        lemmy_docker_ui_image: "docker.io/qiancsf/lemmy-ui:{{ lemmy_ui_version | default(lemmy_version | default(lookup('file', 'VERSION'))) }}"
       tags:
         - docker
         - podman
